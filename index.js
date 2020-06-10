@@ -143,7 +143,7 @@ const training = async (model, dataX, dataY, epochs) => {
 let predictionRequest = (iData) => {
     model.predict(tf.tensor2d(iData, [1, 7])).array().then(array => {
         let arrayData = array[0].map(n => n.toFixed(2));
-        // document.getElementById("modelResult").innerHTML = arrayData;
+        document.getElementById("modelResult").innerHTML = arrayData;
         document.getElementById("modelResultMax").innerHTML = indexOfMax(arrayData);
     });
 }

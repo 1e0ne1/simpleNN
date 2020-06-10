@@ -10,6 +10,8 @@
     <h1>Simple neural network</h1>
     <h4>This is a simple NN that predicts the number entered on the 7-segment display</h4>
     <p>Click each segment to activate/deactivate, and see the results. When NN is not trained it will return dummy data</p>
+    <p>This NN uses 10 outputs with probabilities, and the index of the highest one matches the predicted number</p>
+    <p>This shows how larger Neural Networks work, since everything dependes on the size of the information that will receive, and of course the statistics behind to ensure that the model works as expected.</p>
     <div class="train">
         <p>Train model</p>
         <form id="epochForm"> 
@@ -42,8 +44,9 @@
     </div>
     
     <div id="result">
-        <p>The result according to the Neural Network is: </p>
+        <p>This is the list of the predictions</p>
         <h3 id="modelResult"></h3>
+        <p>The result according to the Neural Network is (index of higher probability): </p>
         <h3 id="modelResultMax"></h3>
     </div>
 
