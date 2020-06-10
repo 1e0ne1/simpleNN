@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple neural network</h1>
+    <h4>This is a simple NN that predicts the number entered on the 7-segment display</h4>
+    <p>Click each segment to activate/deactivate, and see the results. When NN is not trained it will return dummy data</p>
+    <div class="train">
+        <p>Train model</p>
+        <form id="epochForm"> 
+            <label for="epochs">Times to train the Neural Network</label>
+            <p>Note: Wait aprox 1s. for every 50 training events</p>
+            <input type="number" name="epochs">
+            <br>
+            <input type="submit" value="train!">
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <!-- <div id="test">
+        <form id="prediction">
+            <label for="data">Enter data to test</label>
+            <input type="text" name="data">
+            <br>
+            <input type="submit">
+        </form>
+    </div> -->
+
+    <div id="display-1" class="display-container display-size-12">
+        <div class="segment-x segment-a" id="segmentA"><span class="segment-border"></span></div>
+        <div class="segment-y segment-b" id="segmentB"><span class="segment-border"></span></div>
+        <div class="segment-y segment-c" id="segmentC"><span class="segment-border"></span></div>
+        <div class="segment-x segment-d" id="segmentD"><span class="segment-border"></span></div>
+        <div class="segment-y segment-e" id="segmentE"><span class="segment-border"></span></div>
+        <div class="segment-y segment-f" id="segmentF"><span class="segment-border"></span></div>
+        <div class="segment-x segment-g" id="segmentG"><span class="segment-border"></span></div>
+    </div>
+    
+    <div id="result">
+        <p>The result according to the Neural Network is: </p>
+        <h3 id="modelResult"></h3>
+        <h3 id="modelResultMax"></h3>
+    </div>
+
+    
+    
+    <div id="model"></div>
+    <canvas id="myChart" width="100" height="100"></canvas>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="index.js"></script>
+</body>
+</html>
