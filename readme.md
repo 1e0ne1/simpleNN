@@ -1,7 +1,7 @@
 ### Simple Neural Network
 
 ## Description
-This is a simple neural network that uses a 7-segment display to show how neural network predicts a value based on inputs. Each segment is mapped to the input data of the Neural network, that uses the following configuration:
+This is a simple neural network, built using keras, that uses a 7-segment display to show how neural network predicts a value based on inputs. Each segment is mapped to the input data of the Neural network, that uses the following configuration:
 
 1. Input Neurons: 7
 2. Output Neurons: 10
